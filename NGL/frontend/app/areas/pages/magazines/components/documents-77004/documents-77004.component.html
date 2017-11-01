@@ -1,0 +1,27 @@
+<div>
+	<ej-toolbar #toolControls id="toolControls" [dataSource]="toolControlsData" [fields]="toolFields" [enableSeparator]="toolSeparator" [height]="34"
+							(click)="onToolControlsClick($event)"></ej-toolbar>
+</div>
+<div>
+	<ej-toolbar #toolEdits id="toolEdits" [dataSource]="toolEditsData" [fields]="toolFields" [enableSeparator]="toolSeparator" [height]="34"
+							(click)="onToolEditsClick($event)"></ej-toolbar>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<ej-grid #grid id="grid" cssClass="standart" [dataSource]="dsDocuments" allowSelection="true"
+						 [selectionSettings]="selectionMode" allowTextWrap="true" [textWrapSettings]="textWrapSettings"
+						 [editSettings]="editSettings"
+						 [keySettings]="keySettings"
+						 (actionBegin)="onActionBegin($event)"
+						 (actionComplete)="onActionComplete($event)">
+			<e-columns>
+				<e-column field="Id" [isPrimaryKey]="true" [visible]="false" [allowEditing]="false"></e-column>
+				<e-column field="Parameter" headerTextAlign="left" headerText="Parameters" width="200" textAlign="left" cssClass="col-params" [allowEditing]="false"></e-column>
+				<e-column field="Data1" headerTextAlign="left" headerText="Data1" width="100" textAlign="right" cssClass="col-data"></e-column>
+			</e-columns>
+		</ej-grid>
+	</div>
+	<div>
+		<div class="col-md-8"></div>
+	</div>
+</div>

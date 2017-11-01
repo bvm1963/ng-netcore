@@ -1,0 +1,17 @@
+Add a new migration (If it’s the first one, it will add the neccessary folder structure and classes)
+
+dotnet ef migrations add {MigrationName}
+
+dotnet ef migrations add {MigrationName} --output-dir Backend\Data\Migrations
+
+dotnet ef migrations add Identity --output-dir Backend\Data\Migrations
+
+
+Remove the most recent migration.
+
+dotnet ef migrations remove
+
+
+Update the database the latest version (apply all migrations)
+
+dotnet ef database update 
