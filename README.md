@@ -28,11 +28,13 @@ Valerio De Sanctis - https://github.com/PacktPublishing/ASPdotNET-Core-and-Angul
 
 **Run the following commands in Command Prompt :**
 
-cd ng.netcore
+cd ng-netcore
 
 cd NGL
 
 npm install
+
+dotnet restore
 
 dotnet ef database update
 
@@ -41,7 +43,7 @@ dotnet watch run
 ---------------------------------------------------------------------------------------
 **Open MS SQL Server Management Studio and execute** 
 
- ng.netcore\NGL\Backend\Data\Scripts\script.sql
+ ng-netcore\NGL\Backend\Data\Scripts\script.sql
  
 ---------------------------------------------------------------------------------------
 **Run the following commands in OTHER Command Prompt :**
